@@ -47,17 +47,17 @@ var assetsDir = 'assets/',
 	buildDir = 'build/';
 
 //--------------------------------------webp
-gulp.task('imgWebp', function () {
-	return gulp
-		.src(assetsDir + 'i/**/*')
-		.pipe(
-			webp({
-				quality: 80,
-			})
-		)
-		.pipe(gulp.dest(outputDir + 'i/'))
-		.pipe(browserSync.stream({ once: true }));
-});
+// gulp.task('imgWebp', function () {
+// 	return gulp
+// 		.src(assetsDir + 'i/**/*')
+// 		.pipe(
+// 			webp({
+// 				quality: 50,
+// 			})
+// 		)
+// 		.pipe(gulp.dest(outputDir + 'i/'))
+// 		.pipe(browserSync.stream({ once: true }));
+// });
 //--------------------------------------webp###
 
 //----------------------------------------------------Compiling
@@ -142,7 +142,7 @@ gulp.task('fontsConvert', function () {
 //-------------------------------------------------Synchronization
 gulp.task('imageSync', function () {
 	return gulp
-		.src(assetsDir + 'i/**/*')
+		.src(assetsDir + 'i/**/*', 80)
 		.pipe(plumber())
 		.pipe(gulp.dest(outputDir + 'i/'))
 		.pipe(browserSync.stream({ once: true }));
@@ -176,7 +176,7 @@ gulp.task('watch', function () {
 		gulp.series('jsConcatComponents')
 	);
 	gulp.watch(assetsDir + 'i/**/*', gulp.series('imageSync'));
-	gulp.watch(assetsDir + 'i/**/*', gulp.series('imgWebp'));
+	// gulp.watch(assetsDir + 'i/**/*', gulp.series('imgWebp'));
 	gulp.watch(
 		assetsDir + 'fonts/**/*',
 		gulp.series('fontsSync', 'fontsConvert')
@@ -216,13 +216,13 @@ gulp.task('imgBuild', function () {
 		.pipe(
 			image({
 				pngquant: true,
-				optipng: false,
+				optipng: true,
 				zopflipng: true,
-				jpegRecompress: false,
+				jpegRecompress: true,
 				mozjpeg: true,
 				gifsicle: true,
 				svgo: false,
-				concurrent: 10,
+				concurrent: 70,
 				quiet: false, // defaults to false
 			})
 		)
@@ -367,7 +367,7 @@ let taskArray = {
 		gulp.parallel(
 			'pug',
 			'sass',
-			'imgWebp',
+			// 'imgWebp',
 			'imageSync',
 			'fontsSync',
 			'fontsConvert',

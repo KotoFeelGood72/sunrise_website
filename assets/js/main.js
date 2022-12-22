@@ -83,11 +83,12 @@ function updateSizes() {
 	windowHeight = window.innerHeight;
 }
 
-if ('objectFit' in document.documentElement.style === false) {
+if ('objectFit' in document.documentElement.style === true) {
 	document.addEventListener('DOMContentLoaded', function () {
 		Array.prototype.forEach.call(
 			document.querySelectorAll('img[data-object-fit]'),
 			function (image) {
+				
 				(image.runtimeStyle || image.style).background =
 					'url("' +
 					image.src +
