@@ -1,0 +1,351 @@
+.shop {
+}
+.section_in {
+}
+.topPage {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.topPage_main {
+	padding: 12.4rem 0 12.3rem;
+	margin-bottom: 7rem;
+	@include bp($point_4) {
+		padding: 10rem 0;
+	}
+	h1 {
+		color: $white;
+		text-align: center
+	}
+}
+.shop_main_w {
+	@include flex-start;
+	align-items: flex-start;
+	position: relative;
+	width: 100%;
+	@include bp($point_2) {
+		flex-direction: column;
+	}
+}
+.shop_sidebar_w {
+	margin-right: 6.8rem;
+	min-width: 30rem;
+	position: sticky;
+	top: 5rem;
+	left: 0;
+	@include bp($point_2) {
+		display: none;
+	}
+	@include bp($point_4) {
+		width: 100%;
+	}
+
+	&.active {
+		display: block;
+		position: absolute;
+		top: 6rem;
+		left: 0;
+		z-index: 99;
+	}
+}
+.shop_sidebar {
+	background-color: $white;
+	box-shadow: $shadow;
+	padding: 3rem;
+	border-radius: 1rem;
+}
+.shop_sidebar_title {
+	font-size: 1.6rem;
+	font-family: $font_2;
+	color: $dark;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+.sidebar_form {
+
+	.form_filter .global_input, .form_filter .global_select {
+		max-width: 100%;
+		margin-bottom: 2rem;
+	}
+	.form_filter {
+		flex-direction: column;
+		p {
+			font-size: 1.6rem;
+			margin-bottom: 1rem;
+		}
+		.btn {
+			width: 100%;
+			@include bp($point_2) {
+				max-width: 100%;
+			}
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+.form_filter {
+}
+.filter_geo {
+}
+.filter_geo_result {
+}
+.global_select {
+}
+.input_group_w {
+	position: relative;
+	width: 100%;
+
+	input {
+		border: .1rem solid $grey1;
+		&:focus {
+			border-color: $orange;
+			background-color: $white;
+		}
+	}
+}
+
+
+.after_infput_mode {
+	position: absolute;
+	top: 55%;
+	transform: translateY(-50%);
+	right: 0;
+	font-size: 1.5rem;
+	font-family: $font_3;
+}
+.input_group {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(44%, 1fr));
+	grid-gap: 2rem;
+	max-width: 21rem;
+	margin-left: 0;
+	margin-right: auto;
+	@include bp($point_4) {
+		max-width: 24rem;
+	}
+	&>div {
+		&:first-child {
+			position: relative;
+			&:after {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				content: '-';
+				left: calc(100% + .6rem);
+			}
+		}
+	}
+}
+.global_input {
+}
+.input_before {
+}
+.input_after {
+}
+.input_price_before {
+}
+.input_price_after {
+}
+.btn {
+}
+.btn_link_icon {
+	@include bp($point_4) {
+		display: none;
+	}
+}
+.icon {
+}
+.icon-arr-right {
+}
+.shop_main {
+	width: 100%
+}
+.shop_main_head {
+	@include flex-space;
+	margin-bottom: 7rem;
+	@include bp($point_2) {
+		margin-bottom: 2rem;
+	}
+	@include bp($point_4) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+.shop_count {
+	font-size: 2.2rem;
+	font-family: $font_3;
+	color: $dark;
+	@include bp($point_2) {
+		display: none;
+	}
+	span {
+		color: $orange;
+	}
+}
+.shop_sort {
+	@include bp($point_4) {
+		display: none;
+	}
+}
+.shop_list_w {
+}
+.shop_list {
+	li {
+		padding-bottom: 4rem;
+		border-bottom: .1rem solid $grey1;
+		margin-bottom: 4rem;
+	}
+}
+.card {
+	@include flex-start;
+	@include bp($point_4) {
+		flex-direction: column;
+	}
+}
+.card_img {
+	width: 100%;
+	max-width: 43rem;
+	margin-right: 6rem;
+	position: relative;
+	@include bp($point_4) {
+		margin: 0 0 2rem 0;
+	}
+	a {
+		@include flex-center;
+		width: 100%;
+		height: 100%;
+	}
+	img {
+		object-fit: cover;
+	}
+}
+.card_label {
+	position: absolute;
+	top: 1.5rem;
+	left: 1.5rem;
+	font-size: 1.6rem;
+	font-family: $font_2;
+	background: $gradient;
+	padding: .7rem 1.3rem;
+	border-radius: 0.5rem;
+	color: $dark;
+	@include bp($point_4) {
+		font-size: 1rem;
+		padding: .5rem 1rem;
+	}
+}
+.card_content_w {
+	width: 100%;
+	height: 100%;
+	min-height: 28rem;
+	@include flex-space;
+	flex-direction: column;
+	align-items: flex-start;
+	@include bp($point_2) {
+		min-height: 100%;
+	}
+}
+.card_content {
+	max-width: 38rem;
+	margin-bottom: 5rem;
+	flex: 1;
+	height: 100%;
+}
+.card_title {
+
+	h3 {
+		font-size: 2.2rem;
+		font-family: $font_3;
+		color: $dark;
+		@include bp($point_4) {
+			font-size: 1.8rem;
+		}
+	}
+	margin-bottom: 2rem;
+	@include bp($point_4) {
+		margin-bottom: 1rem;
+	}
+}
+.card_address {
+	@include flex-start;
+
+	p {
+		display: block;
+		color: $grey3;
+		font-size: 1.6rem;
+		@include bp($point_4) {
+			font-size: 1.4rem;
+		}
+	}
+}
+.card_address_icon {
+	margin-right: 1rem;
+	color: $grey3;
+}
+.card_bottom {
+	@include flex-space;
+	width: 100%;
+
+	.btn-link {
+		a {
+			padding: .6rem 1.5rem;
+			p {
+				text-transform: none;
+			}
+		}
+	}
+}
+.card_price {
+	position: relative;
+	font-size: 2.2rem;
+	font-family: $font_3;
+	color: $dark;
+	@include bp($point_4) {
+		font-size: 1.8rem;
+	}
+	&:after {
+		content: ' руб.';
+	}
+}
+
+
+
+
+.shop_filter_trigger {
+	position: relative;
+	padding: 1.5rem 6rem 1.5rem 2rem;
+	box-shadow: $shadow;
+	font-size: 1.6rem;
+	font-family: $font_3;
+	border-radius: 0.5rem;
+	display: none;
+	@include bp($point_2) {
+		display: block;
+	}
+	@include bp($point_4) {
+		font-size: 1.4rem;
+		width: 100%;
+		margin-bottom: 1.5rem;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 1.5rem;
+		height: 1rem;
+		right: 2rem;
+		background: url('../../i/global/arrow-down-dark.svg') no-repeat center/contain;
+	}
+
+	&.active {
+		position: relative;
+		z-index: 99;
+
+		&:after {
+			transform: translateY(-50%) rotate(180deg);
+		}
+	}
+}

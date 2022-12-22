@@ -1,0 +1,45 @@
+.breadcrumb__list {
+	@include flex-start;
+	padding: 2rem 0;
+	border-bottom: .1rem solid $grey1;
+	border-top: .1rem solid $grey1;
+	margin-bottom: 7rem;
+	@include bp($point_4) {
+		margin-bottom: 4rem;
+		padding: 1.5rem 0;
+		flex-wrap: wrap;
+	}
+	&>li {
+		position: relative;
+		font-size: 1.6rem;
+		color: $orange;
+		@include bp($point_4) {
+			font-size: 1rem;
+		}
+		a {
+			font-size: 1.6rem;
+			color: $dark;
+			@include bp($point_4) {
+				font-size: 1rem;
+			}
+		}
+		&:not(:last-child) {
+			&:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: calc(100% + .8rem);
+				background: url('../../i/svg/arrow-right.svg') no-repeat center;
+				background-size: contain;
+				width: .4rem;
+				height: 1rem;
+				@include bp($point_4) {
+					width: .3rem;
+					height: .8rem;
+				}
+			}
+			margin-right: 2rem;
+		}
+	}
+}

@@ -1,0 +1,73 @@
+footer.footer
+	.section_in 
+		.footer_main_w 
+			.footer_top 
+				.footer_top_info 
+					.footer_logo 
+						a(href="#")
+							img(src="i/global/logo.png", alt="") 
+							p Агентство Недвижимости "Солнечный берег"
+					.footer_info_txt 
+						p Заключая сделки через наших специалистов вы полностью исключаете риск быть обманутым, а также получаете полную и актуальную информацию о состоянии, документах и владельцах объекта.
+				nav.footer_nav
+					ul.footer_nav_list 
+						li 
+							a(href="#") Главная
+						li 
+							a(href="#") Купить
+							ul.footer_submenu 
+								each item in ['Квартиры', 'Дома', 'Участки', 'Коттеджи', 'Дачи', 'Гараж']
+									li 
+										a(href="#")=item 
+						li 
+							a(href="#") Аренда
+							ul.footer_submenu 
+								each item in ['Квартиры', 'Дома', 'Участки', 'Коттеджи']
+									li 
+										a(href="#")=item
+						li 
+							a(href="#") Коммерция
+							ul.footer_submenu 
+								each item in ['Продажа', 'Аренда']
+									li 
+										a(href="#")=item
+						li 
+							a(href="#") Риелторы
+						li 
+							a(href="#") Новости
+						li 
+							a(href="#") Контакты
+			.footer_body 
+				.footer_office 
+					p ОФИСЫ:
+					ul.footer_office_list 
+						each item in ['пгт. Джубга, ул. Советская 72 а', 'пгт. Новомихайловский, ул. Ленина 9б', 'с. Небуг, ул. Центральная 6', 'г. Туапсе, ул. Шаумяна 1']
+							li 
+								.footer_office_icon 
+									+icon('location')
+								p=item
+				.footer_contacts 
+					p КОНТАКТЫ:
+					ul.footer_contacts_list 
+						each item, i in ['8 (996) 050-04-52', '8 (988) 323 67 89', 'an.solnechnybereg@yandex.ru']
+							if i === 2
+								li
+									a(href="#")  
+										.footer_contacts_icon 
+											+icon('mail')
+										p=item
+							else 
+								li
+									a(href="#") 
+										.footer_contacts_icon 
+											+icon('phone')
+										p=item
+				.footer_policy 
+					a(href="#") Политика конфиденциальности 
+	.footer_bottom
+		.section_in 
+			.footer_bottom_main 
+				.footer_copyright © 2022 Все права защищены
+				.arkada_brand 
+					a(href="#")
+						img(src="i/global/arkada.svg", alt="") 

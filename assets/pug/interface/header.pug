@@ -1,0 +1,56 @@
+header.header
+	.section_in 
+		.header_main
+			.header_logo 
+				a(href="#")
+					img(src="i/global/logo.png", alt="")
+			nav.header_nav 
+				ul.header_nav_list 
+					-
+						var menu = [
+							{
+								link: 'Купить',
+								submenu: true
+							},
+							{
+								link: 'Аренда',
+								submenu: true
+							},
+							{
+								link: 'Коммерция',
+								submenu: true
+							},
+							{
+								link: 'Риелторы',
+							},
+							{
+								link: 'Новости',
+							},
+							{
+								link: 'Контакты',
+							},
+						]
+					each item in menu 
+						li
+							a(href="#")
+								p=item.link 
+							if item.submenu === true
+								ul.submenu_list
+									-for(i = 0; i < 6; i++)
+										- var title = ['Квартиры', 'Дома', 'Участки', 'Коттеджи', 'Дачи', 'Гараж']
+										- var icon = ['apartament', 'home', 'land', 'cottage', 'fence', 'garage']
+											li
+												a(href="#")
+													.submenu_icon
+														+icon(`ui--${icon[i]}`)
+													p=title[i]
+			.header_info 
+				.header_phone 
+					a(href="#") +7 (000) 000-00-00
+				.header_call.btn.call_action.btn-standart
+					button(type="button") заказать звонок
+			.header_burger
+				span 
+				span 
+				span 
+				

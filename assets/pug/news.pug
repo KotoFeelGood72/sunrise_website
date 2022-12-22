@@ -1,0 +1,24 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Новости'}
+block content_block
+	+breadcrumb(['Главная'], 'Новости')
+	section.news 
+		.section_in 
+			.news_main 
+				.news_head 
+					.news_title 
+						h1=array.title_inner
+					+sort({
+						class: 'news_sortering'
+					})
+				.news_grid_w 
+					ul.homenews_grid 
+						-for(i = 0; i < 12; i++)
+							li.homenews_item_w 
+								+newsitem
+					+pagination({
+						pages:5,
+						arrows:true
+					})

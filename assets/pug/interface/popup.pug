@@ -1,0 +1,58 @@
+.popup_form 
+	.popup_form_bg.close_popup
+	.popup_form_main
+		.popup_form_close.close_popup 
+			button 
+				+icon('close')
+		.popup_form_head 
+			h3 Оставьте заявку
+			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet pretium, ullamcorper convallis sed nec molestie.
+		.popup_form_action
+			form(action="#") 
+				+input({
+					place: 'Введите имя',
+				})
+				+input({
+					place: 'Введите телефон',
+					type: 'tel'
+				}) 
+				+input({
+					place: 'Введите e-mail',
+					type: 'email'
+				})
+				+btn({
+					btn: true,
+					type: 'submit',
+					name: 'отправить заявку',
+				})
+				.form_notice Отправляя форму вы соглашаетесь с Политикой конфиденциальности
+
+.burger 
+	.burger_bg.remove_popup 
+	.burger_main
+		.burger_close.remove_popup
+			button(type="button")
+				+icon('close')
+		.footer_logo.burger_logo 
+			a(href="#")
+				img(src="i/global/logo.png", alt="") 
+				p Агентство Недвижимости "Солнечный берег"
+		nav.burger_nav 
+			ul 
+				each item in ['Купить', 'Аренда', 'Коммерция', 'Риелторы', 'Новости', 'Контакты']
+					li 
+						a(href="#")=item 
+		ul.footer_contacts_list 
+			each item, i in ['8 (996) 050-04-52', '8 (988) 323 67 89', 'an.solnechnybereg@yandex.ru']
+				if i === 2
+					li
+						a(href="#")  
+							.footer_contacts_icon 
+								+icon('mail')
+							p=item
+				else 
+					li
+						a(href="#") 
+							.footer_contacts_icon 
+								+icon('phone')
+							p=item

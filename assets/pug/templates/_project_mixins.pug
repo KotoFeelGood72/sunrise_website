@@ -1,0 +1,72 @@
+// Input //
+mixin input(data)
+	.global_input(class=data.class)
+		input(type=data.type ? data.type : data.type="text" placeholder=data.place ? data.place : data.place="" value=data.val ? data.val : data.val="")
+
+// END //
+
+// BTN //
+mixin btn(data)
+	if data.link
+		.btn-link 
+			a(href="#")
+				p=data.name
+				if data.icon === true 
+					.btn_link_icon 
+						+icon('arr-right')
+	else if data.btn === true 
+		.btn(class=data.class)
+			button(type=data.type ? data.type : data.type="button")
+				p=data.name
+				if data.icon === true 
+					.btn_link_icon 
+						+icon('arr-right')
+
+// END //
+
+// News item //
+mixin newsitem
+	.news_item 
+		.news_item_img 
+			a(href="#")
+				img(src="i/home/products_0.jpg", alt="")
+				.news_item_link 
+					p Просмотреть
+		.news_item_content 
+			h3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante neque integer sed etiam in nibh...
+			span 01/01/2022 
+
+// END //
+
+mixin horizen 
+	.card 
+		.card_img
+			a(href="#")
+				img(src="i/home/products_0.jpg", alt="")
+				.card_label Горячее предложение
+		.card_content_w
+			.card_content
+				.card_title
+					h3 3-к квартира, 93,7 м², 9/10 эт.
+				.card_address 
+					.card_address_icon 
+						+icon('location')
+					p Краснодарский край, село Агой, переулок Центральный, 2
+			.card_bottom 
+				.card_price 15 000 000
+				+btn({
+						link: true,
+						name: 'Посмотреть',
+						icon: true,
+					})
+
+mixin sort(data)
+	.shop_sort.global_select(class=data.class) 
+		select(name="shop_sortering")
+			option(value="Наиболее актуальные") Наиболее актуальные
+			option(value="Сначала новые") Сначала новые
+			option(value="Сначала старые") Наиболее актуальные
+			option(value="По возрастанию цены") По возрастанию цены
+			option(value="По убыванию цены") Наиболее актуальные
+		

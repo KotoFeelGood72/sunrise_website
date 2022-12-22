@@ -1,0 +1,113 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'1-к квартира, 26,7 м², 1/2 эт.'}
+block content_block
+	+breadcrumb(['Главная', 'Купить квартиру'], '1-к квартира, 26,7 м², 1/2 эт.')
+	section.singleproducts 
+		.section_in 
+			.singleproducts_main_w
+				.singleproducts_info_trigger Открыть параметры 
+				.singleproducts_head 
+					.singleproducts_title 
+						h1 1-к квартира, 26,7 м², 1/2 эт.
+						.singleproducts_label Горячее предложение
+					.singleproducts_address 
+						.singleproducts_address_icon 
+							+icon('location')
+						p Краснодарский край, Туапсе, 11
+				.singleproducts_main
+					.singleproducts_main_content 
+						.singleproducts_gallery 
+							.singleproducts_slider_w 
+								.singleproducts_slider.swiper 
+									.swiper-wrapper
+										-for(i = 0; i < 6; i++) 
+											.swiper-slide 
+												.singleproducts_slide 
+													a(href="#")
+														img(src="i/home/products_0.jpg", alt="")
+							.singleproducts_thumb_w 
+								.singleproducts_thumb_slider.swiper 
+									.swiper-wrapper
+										-for(i = 0; i < 6; i++) 
+											.swiper-slide 
+												.singleproducts_slide 
+													img(src="i/home/products_0.jpg", alt="")
+									.swiper-scrollbar.singleproducts_thumb_scrollbar
+						.singleproducts_description
+							.products_section_head 
+								h3 Описание:
+								p Продается 1-комнатная квартира в г. Туапсе р-на Кадош. Просторная светлая комната- 15,9 кв.м, с\у совмещенный , кухня объединена с коридором - 9,3 кв.м. В квартире выполнен качественный ремонт. Коммуникации: отопление, свет, водопровод -все центральные, горячая вода от бойлера.
+						.singleproducts_service 
+							ul
+								-for(i = 0; i < 8; i++)
+									- var icons = ['area-kithen', 'condition', 'security', 'stove', 'elevator', 'parking', 'balcony', 'trash']
+									- var title = ['Площадь кухни:<span> 8 м²</span>', 'Ремонт: <span>Качественный</span>', 'Охрана/Консьерж: <span>Нет</span>', 'Отопление: <span>Центральное</span>', 'Лифт: <span>Нет лифта</span>', 'Парковка: <span>Наземная</span>', 'Балкон: <span>Лоджия</span>', 'Мусоропровод: <span>Нет</span>']
+									li 
+										.singleproducts_service_icon 
+											+icon(`ui--${icons[i]}`)
+										.singleproducts_service_item_txt!=title[i]
+						.singleproducts_map_w
+							.products_section_head 
+								h3 Расположение:
+								p Краснодарский край, Туапсе, 11
+							.singleproducts_map 
+								#map
+						.singleproducts_upsell_w 
+							.products_section_head 
+								h3 Похожие предложения:
+							ul.single_upsell
+								-for(i = 0; i < 3; i++) 
+									li 
+										.hot_slide.upsell_slide
+											.hot_item_img
+												a(href="#")  
+													img(src=`i/home/products_${i}.jpg`, alt="")
+											.hot_item_content 
+												.hot_item_title
+													a(href="#")  
+														h3 Дом, 150 м2, 2 этажа
+												.hot_item_location
+													.location_icon 
+														+icon('location')
+													p Краснодарский край, село Агой, переулок Центральный, 2
+											.hot_item_bottom 
+												.hot_item_price 15 000 000
+												.hot_item_link 
+													a(href="#")
+														+icon('arr-right')
+					.singleproducts_sidebar
+						.sidebar_info 
+							.singleproducts_siderbar_price 
+								p 3 300 000
+							ul.singleproducts_sidebar_list 
+								each item in ['Количество комнат: <span>1</span>', 'Этаж: <span>1/2</span>', 'Площадь: <span>26,7 м²</span>', 'Жилая площадь: <span>15,9 м²</span>', 'Материал дома: <span>кирпичный</span>', 'Год постройки: <span>1975 г.</span>']
+									li!=item
+						.sidebar_people 
+							.sidebar_people_head 
+								.sidebar_people_img 
+									img(src="i/rieltor/rieltor_0.jpg", alt="")
+								.sidebar_people_name 
+									p Римма
+									span Специалист по недвижимости
+							.sidebar_people_contacts 
+								ul 
+									li 
+										a(href="#")
+											.sidebar_people_icon 
+												+icon('phone')
+											p +7 (928) 415-14-95
+									li 
+										a(href="#")
+											.sidebar_people_icon 
+												+icon('envelope')
+											p IR@solnechnybereg.ru
+								.link_people 
+									a(href="#") 
+										p О специалисте
+										.link_people_icon
+											+icon('arr-right') 
+					
+					
+											

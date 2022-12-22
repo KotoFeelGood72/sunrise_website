@@ -1,0 +1,70 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Контакты'}
+block content_block
+	+breadcrumb(['Главная'], 'Контакты')
+	section.contacts 
+		.section_in 
+			.contacts_main 
+				.contacts_top 
+					.contacts_title
+						h1=array.title_inner
+					ul.contacts_info 
+						li 
+							.contacts_info_label 
+								.contacts_info_icon 
+									+icon('tel')
+								p Телефон 
+							ul 
+								-for(i = 0; i < 2; i++)
+									li 
+										a(href="#") 8 (996) 050-04-52 
+						li 
+							.contacts_info_label 
+								.contacts_info_icon 
+									+icon('envelope')
+								p E-mail 
+							ul 
+								li 
+									a(href="#") an.solnechnybereg@yandex.ru
+				.contacts_callback 
+					.contacts_callback_head 
+						.contacts_callback_label 
+							.contacts_callback_icon 
+								+icon('chat')
+							p Обратная связь
+						p Заполните форму ниже и наш специалист свяжется с Вами в ближайшее время
+					.contacts_form_w 
+						form(action="").contacts_form
+							.contacts_input_group
+								+input({
+									place: 'Введите имя',
+								})
+								+input({
+									place: 'Введите e-mail',
+									type: 'email'
+								})
+								+input({
+									place: 'Введите телефон',
+									type: 'tel'
+								})
+							.contacts_form_textarea 
+								textarea(placeholder="Текст сообщения")
+							.contacts_form_action 
+								+btn({
+									btn: true,
+									type: 'submit',
+									name: 'отправить обращение',
+								})
+								.contacts_form_notice!='Отправляя форму вы соглашаетесь с <a href="#">Политикой конфиденциальности</a>'
+					.contacts_office_w 
+						.contacts_office_list_w 
+							.contacts_office_label 
+								.contacts_office_icon 
+									+icon('home')
+								p Офисы:
+							ul.contacts_office_list
+						.contacts_office_map 
+							#officeMap
+								

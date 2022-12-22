@@ -1,0 +1,241 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Главная'}
+block content_block
+	section.hero 
+		.section_in 
+			.hero_main 
+				.hero_content 
+					.hero_title 
+						h1!='Недвижимость от профессионалов'
+					.hero_txt.global_txt 
+						p В нашей базе огромное количество объектов в любых районах города. Самые свежие предложения на рынке вторичного жилья.
+				.hero_filter_w 
+					.hero_filter_head 
+						ul.hero_filter_type 
+							each item, i in ['Квартиры', 'Дома', 'Участки', 'Коттеджи', 'Дачи', 'Гараж']
+								if i === 0
+									li.active
+										a(href="#")=item 
+								else
+									li 
+										a(href="#")=item 
+					.hero_filter_action 
+						form(action="" class="form_filter")
+							.filter_geo.global_input 
+								input(type="search" placeholder="Местоположение")
+								ul.filter_geo_result 
+									each item in ['Тимашевск', 'Туапсе']
+										li 
+											a(href="#")=item
+							.global_select 
+								select(name="id_state")
+									-for(i = 0; i < 5; i++)
+										option(value="Продажа") Продажа
+							+input({
+								place: '0',
+								type: 'number',
+								class: 'input_price'
+							})
+							+btn({
+								btn: true,
+								type: 'submit',
+								name: 'искать',
+								icon: true
+							})
+	section.mortgage 
+		.section_in 
+			.mortgage_main 
+				.mortgage_head 
+					h2 Поможем рассчитать ипотеку
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet pretium, ullamcorper convallis sed nec molestie.
+				.mortgage_form
+					form(action="")
+						+input({
+							place: 'Введите имя'
+						})
+						+input({
+							place: 'Введите телефон',
+							type: 'tel'
+						})
+						+input({
+							place: 'Введите e-mail',
+							type: 'email'
+						})
+						+btn({
+							btn: true,
+							type: 'submit',
+							name: 'отправить заявку',
+						})
+					.form_notice Отправляя форму вы соглашаетесь с Политикой конфиденциальности
+	section.hot
+		.section_in 
+			.hot_main_w 
+				.hot_head 
+					h2 Горячие предложения
+					p Лучшие предложения продажи недвижимости в регионе
+				.hot_slider_w 
+					.hot_slider.swiper 
+						.swiper-wrapper
+							-for(i = 0; i < 3; i++) 
+								.swiper-slide 
+									.hot_slide
+										.hot_item_img
+											a(href="#")  
+												img(src=`i/home/products_${i}.jpg`, alt="")
+											.label_type_sale.mod_label Продажа
+											.label_type_home.mod_label Дом
+										.hot_item_content 
+											.hot_item_title
+												a(href="#")  
+													h3 Дом, 150 м2, 2 этажа
+											.hot_item_location
+												.location_icon 
+													+icon('location')
+												p Краснодарский край, село Агой, переулок Центральный, 2
+										.hot_item_bottom 
+											.hot_item_price 15 000 000
+											.hot_item_link 
+												a(href="#")
+													+icon('arr-right')
+					.hot_slider_pug.global_pag
+	section.formParams 
+		.section_in 
+			.formParams_main 
+				.formParams_head 
+					.formParams_head_icon 
+						+icon('search')
+					p Найти по своим параметрам
+				form(action="#" class="formParams_form")
+					+input({
+						place: 'Город, улица или № Объекта'
+					})
+					.global_select 
+						select(name="id_state")
+							-for(i = 0; i < 5; i++)
+								option(value="Продажа") Продажа
+					.global_select 
+						select(name="type_state")
+							-for(i = 0; i < 5; i++)
+								option(value="Квартиры") Квартиры
+					+btn({
+						btn: true,
+						type: 'submit',
+						name: 'к результатам',
+						icon: true
+					})
+	section.topSale 
+		.section_in 
+			.topSale_main 
+				.topSale_main_content 
+					.topSale_title 
+						h3 Объект недели
+					.topSale_status 
+						ul 
+							li.active Продажа
+							li.status Дом
+					.topSale_info 
+						p Дом, 150 м2, 2 этажа
+						.topSale_address
+							.hot_item_location
+								.location_icon 
+									+icon('location')
+								p Краснодарский край, село Агой, переулок Центральный, 2
+					.topSale_bottom 
+						.hot_item_price 15 000 000
+						+btn({
+							link: true,
+							name: 'Посмотреть',
+							icon: true,
+						})
+				.topSale_gallery 
+					ul.topSale_gallery_grid
+						-for(i = 0; i < 3; i++)
+							li 
+								img(src="i/home/products_0.jpg", alt="")
+	section.teams 
+		.section_in 
+			.teams_main 
+				.teams_main_head 
+					h4 Агентство недвижимости “Солнечный берег”
+					.teams_head_txt.global_txt 
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget justo nibh pellentesque volutpat augue in. Nulla erat quam elementum eget mauris lectus aliquet odio posuere. Et mauris nisi tincidunt malesuada aenean tristique. Tellus tincidunt massa nibh consectetur fames donec. Sit felis lorem in tortor enim gravida. Habitant enim in in enim diam fermentum, tempus feugiat.
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget justo nibh pellentesque volutpat augue in. Nulla erat quam elementum eget mauris lectus aliquet odio posuere. Et mauris nisi tincidunt malesuada aenean tristique. Tellus tincidunt massa nibh consectetur fames donec. Sit felis lorem in tortor enim gravida. Habitant enim in in enim diam fermentum, tempus feugiat.
+				.teams_main_body 
+					.teams_slider.swiper 
+						.swiper-wrapper
+							-for(i = 0; i < 12; i++) 
+								.swiper-slide 
+									.teams_slide 
+										.teams_slide_img 
+											img(src="i/home/products_0.jpg", alt="")
+										.teams_slide_txt 
+											p Имя Фамилия
+											span должность
+					.teams_slider_nav
+						.teams_slide_prev 
+							button(type="button")
+								+icon('arr-right')
+						.teams_slide_next 
+							button(type="button")
+								+icon('arr-right')
+	section.reviews 
+		.section_in 
+			.reviews_main 
+				.reviews_title.section_title 
+					h5 Отзывы
+				.reviews_slider_w 
+					.reviews_slider.swiper 
+						.swiper-wrapper
+							-for(i = 0; i < 12; i++) 
+								.swiper-slide 
+									.reviews_slide
+										.reviews_slide_head 
+											.reviews_slide_img 
+												img(src="i/home/products_0.jpg", alt="")
+											.reviews_slide_name 
+												p “Нашли дом мечты”
+												span Имя Фамилия
+										.reviews_slide_content.global_txt “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper diam leo mi in nisl, libero facilisis odio in. Sem maecenas diam magna mattis duis semper lobortis ullamcorper ut. At tellus faucibus habitant rhoncus, scelerisque nisl, vulputate. At malesuada egestas dignissim donec cursus. Convallis eu pellentesque sed ut mollis ac quis tristique. Blandit integer mauris, elementum dolor blandit varius adipiscing enim egestas. Imperdiet ut aliquam dolor posuere est ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper diam leo mi in nisl, libero facilisis odio in. Sem maecenas diam magna mattis duis semper lobortis ullamcorper ut. At tellus faucibus habitant rhoncus n. Sem maecenas diam magna mattis duis semper lobortis ullamcorper ut. At tellus faucibus habitant rhoncus n. Sem maecenas diam magna mattis duis semper lobortis ullamcorper ut. At tellus faucibus habitant rhoncus n. Sem maecenas diam magna mattis duis semper lobortis ullamcorper ut. At tellus faucibus habitant rhoncus n. Sem maecenas diam magna mattis duis semper lobortis ullamcorper ut. At tellus faucibus habitant rhoncus
+										.reviews_readmore читать далее
+					.reviews_slide_pag.global_pag
+	section.action 
+		.section_in 
+			.action_main 
+				.action_img 
+					img(src="i/home/action.jpg", alt="")
+				.action_form_w
+					.action_form_head 
+						h5 Возникли вопросы?
+						p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet pretium, ullamcorper convallis sed nec molestie. 
+					form(action="")
+						+input({
+							place: 'Введите имя'
+						})
+						+input({
+							place: 'Введите телефон',
+							type: 'tel'
+						})
+						+input({
+							place: 'Введите e-mail',
+							type: 'email'
+						})
+						+btn({
+							btn: true,
+							type: 'submit',
+							name: 'отправить заявку',
+						})
+					.form_notice Отправляя форму вы соглашаетесь с Политикой конфиденциальности
+	section.homenews 
+		.section_in 
+			.homenews_main 
+				.homenews_head 
+					h6 Новости
+				ul.homenews_grid 
+					-for(i = 0; i < 4; i++)
+						li.homenews_item_w 
+							+newsitem
+
+
+

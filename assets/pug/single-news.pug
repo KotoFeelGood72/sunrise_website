@@ -1,0 +1,34 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
+block content_block
+	+breadcrumb(['Главная', 'Новости'], 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
+	section.singlenews
+		.section_in 
+			.singlenews_main 
+				.singlenews_head
+					h1=array.title_inner
+					.singlenews_date 01/01/2022
+				.singlenews_content.global_content 
+					p Lorem ipsum dolor sit amet consectetur. Volutpat nec viverra sit pharetra nunc etiam ullamcorper integer. Morbi ultrices vitae id congue et vulputate ipsum id iaculis. Urna laoreet scelerisque facilisi purus. Ac in viverra donec et lobortis venenatis nunc tincidunt vitae. Eu pharetra tincidunt in posuere dolor pretium ornare risus. Fringilla nisi laoreet nisi maecenas. In placerat placerat id est nibh cras aliquam et nunc. Risus potenti pretium aliquet vitae. Tristique sed quam ultricies et lobortis mi rhoncus pulvinar. Platea viverra egestas ultricies ultrices proin consectetur pharetra auctor. Mattis tincidunt neque magna tortor sed. Orci leo ut fames pulvinar cras. Condimentum fusce malesuada suscipit non duis adipiscing. Dignissim at lobortis cras adipiscing lectus.
+					p Porta consectetur in mauris volutpat volutpat tempus ultricies. Non massa tortor ultricies sem magna id. Pretium felis ac egestas sed. Platea phasellus viverra diam accumsan bibendum. Mi elit turpis blandit sodales velit euismod aliquet. Eget pharetra dolor facilisis mattis. Imperdiet sit purus hac amet eu ultrices nulla enim. Lacus aliquet diam mollis lacus. A porttitor consequat quam pretium. Tortor odio placerat dolor id ac libero sit. Sed dignissim in dolor mauris commodo justo urna quam. Diam nunc at nisl venenatis turpis massa massa orci. Augue pharetra leo augue suspendisse neque viverra. Interdum sed pharetra aliquam eu cursus sagittis odio vitae. Tincidunt phasellus vitae suspendisse scelerisque gravida. Consectetur odio sem sodales quis. Vel viverra interdum vel mattis dignissim ullamcorper eros eros eleifend. Hendrerit gravida accumsan id morbi sed etiam vel. Sodales quam ultrices integer tellus. 
+					img(src="i/home/products_0.jpg", alt="")
+					p Lorem ipsum dolor sit amet consectetur. Volutpat nec viverra sit pharetra nunc etiam ullamcorper integer. Morbi ultrices vitae id congue et vulputate ipsum id iaculis. Urna laoreet scelerisque facilisi purus. Ac in viverra donec et lobortis venenatis nunc tincidunt vitae. Eu pharetra tincidunt in posuere dolor pretium ornare risus. Fringilla nisi laoreet nisi maecenas. In placerat placerat id est nibh cras aliquam et nunc. Risus potenti pretium aliquet vitae. Tristique sed quam ultricies et lobortis mi rhoncus pulvinar. Platea viverra egestas ultricies ultrices proin consectetur pharetra auctor. Mattis tincidunt neque magna tortor sed. Orci leo ut fames pulvinar cras. Condimentum fusce malesuada suscipit non duis adipiscing. Dignissim at lobortis cras adipiscing lectus.
+					p Porta consectetur in mauris volutpat volutpat tempus ultricies. Non massa tortor ultricies sem magna id. Pretium felis ac egestas sed. Platea phasellus viverra diam accumsan bibendum. Mi elit turpis blandit sodales velit euismod aliquet. Eget pharetra dolor facilisis mattis. Imperdiet sit purus hac amet eu ultrices nulla enim. Lacus aliquet diam mollis lacus. A porttitor consequat quam pretium. Tortor odio placerat dolor id ac libero sit. Sed dignissim in dolor mauris commodo justo urna quam. Diam nunc at nisl venenatis turpis massa massa orci. Augue pharetra leo augue suspendisse neque viverra. Interdum sed pharetra aliquam eu cursus sagittis odio vitae. Tincidunt phasellus vitae suspendisse scelerisque gravida. Consectetur odio sem sodales quis. Vel viverra interdum vel mattis dignissim ullamcorper eros eros eleifend. Hendrerit gravida accumsan id morbi sed etiam vel. Sodales quam ultrices integer tellus. 
+				.singlenews_share 
+					p Поделиться:
+					ul 
+						each item in ['vk', 'tg', 'share']
+							li 
+								a(href="#")
+									img(src=`i/global/${item}.svg`, alt="") 
+	section.homenews 
+		.section_in 
+			.homenews_main.single_news_reco
+				.homenews_head 
+					h6 Еще новости:
+				ul.homenews_grid 
+					-for(i = 0; i < 4; i++)
+						li.homenews_item_w 
+							+newsitem

@@ -1,0 +1,185 @@
+.shop {
+}
+.section_in {
+}
+.shop_main_w {
+}
+.people_sidebar {
+	margin-right: 6.6rem;
+	min-width: 30rem;
+	box-shadow: $shadow;
+	border-radius: 1rem;
+	position: sticky;
+	top: 5rem;
+	left: 0;
+	@include bp($point_2) {
+		margin-right: 0;
+		position: static;
+		width: 100%;
+		@include flex-start;
+		margin-bottom: 4rem;
+		padding: 3rem 4rem;
+		box-shadow: none;
+		border-bottom: .2rem solid $grey1;
+		border-radius: 0;
+	}
+	@include bp($point_4) {
+		padding: 0;
+		align-items: flex-start;
+	}
+}
+.people_sidebar_img {
+	width: 100%;
+	height: 30rem;
+	border-radius: 1rem;
+	overflow: hidden;
+	@include bp($point_2) {
+		height: auto;
+		max-width: 20rem;
+		max-height: 20rem;
+		border-radius: 100%;
+		margin-right: 4rem;
+	}
+	@include bp($point_4) {
+		max-width: 10rem;
+		max-height: 10rem;
+		margin-right: 2rem;
+	}
+	img {
+		object-fit: cover;
+	}
+}
+.people_sidebar_content {
+	padding: 3rem 5rem 3rem 2.8rem;
+	@include bp($point_4) {
+		padding: 2rem 1.5rem;
+		max-width: 22rem;
+	}
+
+	h3 {
+		font-size: 2.2rem;
+		font-family: $font_3;
+		color: $dark;
+		margin-bottom: 1.5rem;
+		@include bp($point_4) {
+			font-size: 1.6rem;
+		}
+	}
+}
+.sidebar_people_info {
+	li, a {
+		@include flex-start;
+		align-items: flex-start;
+		font-family: $font_2;
+		font-size: 1.6rem;
+		color: inherit;
+		@include bp($point_4) {
+			font-size: 1.2rem;
+		}
+		p {
+			font-size: 1.6rem;
+			color: inherit;
+			@include bp($point_4) {
+				font-size: 1.2rem;
+			}
+		}
+	}
+	li {
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+		}
+
+		&:nth-child(1) {
+			p {
+				font-family: $font_1;
+				color: $grey3;
+			}
+		}
+
+		&:nth-child(2) {
+			color: $orange;
+		}
+
+		&:nth-child(3) {
+			a {
+				color: $dark;
+			}
+		}
+	}
+}
+.sidebar_people_item {
+
+	
+	
+}
+.sidebar_item_icon {
+	margin-right: 1rem;
+	max-width: 1.6rem;
+}
+.shop_main {
+}
+.shop_main_head {
+}
+.single_people_title {
+	font-size: 2.2rem;
+	font-family: $font_2;
+	color: $dark;
+}
+.shop_sort {
+}
+.global_select {
+}
+.single_people_sort {
+}
+.shop_list_w {
+}
+.shop_list {
+}
+.card {
+}
+.card_img {
+}
+.card_label {
+}
+.card_content_w {
+}
+.card_content {
+}
+.card_title {
+}
+.card_address {
+}
+.card_address_icon {
+}
+.icon {
+}
+.icon-location {
+}
+.card_bottom {
+}
+.card_price {
+}
+.btn-link {
+}
+.btn_link_icon {
+}
+.icon-arr-right {
+}
+.pag_block {
+}
+.pag_list {
+}
+.pag_item {
+}
+.prev_mod {
+}
+.pag_link {
+}
+.pag_link_icon {
+}
+.active_mod {
+}
+.dots_mod {
+}
+.next_mod {
+}

@@ -1,0 +1,93 @@
+// Global 
+$header: 14rem;
+$footer: 59rem;
+
+// Mobile
+$header_mob: 7rem;
+$footer_mob: 10rem;
+
+
+
+$pbm: 8rem;
+//---------------------------------------------fonts
+$font_path: "../fonts/";
+$font_1: 'Montserrat-Regular', sans-serif;
+$font_2: 'Montserrat-SemiBold', serif;
+$font_3: 'Montserrat-Bold', serif;
+$font_4: 'Forum', sans-serif;
+
+$font_size_base: 2rem;
+//---------------------------------------------fonts###
+
+//---------------------------------------------colors
+$white: #fff;
+$black: #000;
+$dark: #151423;
+
+$orange: #FFB036;
+$yellow: #FFCC69;
+$gradient: linear-gradient(90deg, #FFD363 0%, #FFB036 100%);
+
+$grey1: #EBEBF4;
+$grey2: #A09EB0;
+$grey3: #595B5E;
+
+
+// Variable margin
+
+$standart-mb: 14rem;
+$small-mb: 14rem;
+$mobile-mb: 10rem;
+
+
+
+
+
+
+
+$color_text_base: $dark;
+$color_link_base: $orange;
+$body_bg: $white;
+//---------------------------------------------colors###
+
+//---------------------------------------------z-index
+$z-index: (
+	popup : 101,
+	header : 100,
+	footer : 100,
+	el: -1,
+);
+//---------------------------------------------z-index###
+
+//---------------------------------------------layout
+$page_width: 144rem;
+
+//---------------------------------------------layout###
+
+//---------------------------------------------global values
+$gl_radius: 2.4rem;
+//---------------------------------------------global values###
+
+//---------------------------------------------media points
+$point_1: 1200px;
+$point_2: 1024px;
+$point_3: 1023px;
+$point_4: 768px;
+$point_5: 640px;
+$point_6: 480px;
+$point_7: 375px;
+$point_8: 320px;
+//---------------------------------------------media points
+
+//---------------------------------------------forms
+$input_height: 4rem;
+$input_offset: 0 2rem;
+$input_font_size: $font_size_base;
+$input_border_color: #ccc;
+$input_border_color_active: $black;
+$input_placeholder_color: $grey2;
+$input_text_color: $black;
+$input_radius: $gl_radius;
+//---------------------------------------------forms###
+
+$shadow: 0 .4rem 4rem rgba(0, 0, 0, 0.1);

@@ -1,0 +1,24 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Специалисты по недвижимости'}
+block content_block
+	+breadcrumb(['Главная'], 'Риелторы')
+	section.people 
+		.section_in 
+			.people_main 
+				.people_title 
+					h1 Специалисты по недвижимости
+				ul.people_grid 
+					-for(i = 0; i < 8; i++)
+						- var img = 'i/rieltor/rieltor_' + i + '.jpg'
+						- var title = ['Римма', 'Александр', 'Ольга', 'Наталья', 'Елена', 'Оксана', 'Сергей', 'Лазаренко Анна']
+						li.people_item 
+							a(href="#")
+								.people_item_img 
+									img(src=img alt="")
+								.people_item_content
+									.people_name 
+										h3=title[i]
+									.people_item_btn 
+										+icon('arr-right')

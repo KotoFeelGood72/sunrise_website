@@ -1,0 +1,57 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Специалисты по недвижимости'}
+block content_block
+	+breadcrumb(['Главная', 'Риелторы'], 'О специалисте')
+	section.shop 
+		.section_in 
+			.shop_main_w
+				.people_sidebar 
+					.people_sidebar_img 
+						img(src="i/rieltor/rieltor_0.jpg", alt="")
+					.people_sidebar_content 
+						h3 Елена
+						ul.sidebar_people_info 
+							-
+								var info = [
+									{
+										icon: 'location',
+										txt: 'Краснодарский край, Туапсе, 11'
+									},
+									{
+										link: '+7 (928) 415-14-95',
+										icon: 'phone'
+									},
+									{
+										link: 'IR@solnechnybereg.ru',
+										icon: 'envelope'
+									},
+								]
+							each item in info 
+								if item.txt 
+									li.sidebar_people_item 
+										.sidebar_item_icon 
+											+icon(item.icon)
+										p=item.txt
+								else
+									li.sidebar_people_item
+										a(href="#")  
+											.sidebar_item_icon 
+												+icon(item.icon)
+											p=item.link
+				.shop_main
+					.shop_main_head
+						.single_people_title Предложения
+						+sort({
+							class: 'single_people_sort'
+						})
+					.shop_list_w 
+						ul.shop_list 
+							-for(i = 0; i < 5; i++)
+								li
+									+horizen
+					+pagination({
+						pages:5,
+						arrows:true
+					})
