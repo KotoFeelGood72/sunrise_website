@@ -208,6 +208,8 @@
 	max-width: 43rem;
 	margin-right: 6rem;
 	position: relative;
+	// max-height: 28rem;
+	// overflow: hidden;
 	@include bp($point_4) {
 		margin: 0 0 2rem 0;
 	}
@@ -218,6 +220,7 @@
 	}
 	img {
 		object-fit: cover;
+		height: 100%;
 	}
 }
 .card_label {
@@ -237,7 +240,7 @@
 }
 .card_content_w {
 	width: 100%;
-	height: 100%;
+	// height: 100%;
 	min-height: 28rem;
 	@include flex-space;
 	flex-direction: column;
@@ -250,7 +253,7 @@
 	max-width: 38rem;
 	margin-bottom: 5rem;
 	flex: 1;
-	height: 100%;
+	// height: 100%;
 }
 .card_title {
 
