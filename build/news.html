@@ -1,0 +1,645 @@
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=de0ee812-515f-4988-a580-639be65741a6&amp;lang=ru_RU"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+<!--  Breadcrumb-->
+<!--  items - pages in array, e.g. (['Main page', 'News'])-->
+<!--  last - last active page in span, e.g. (['Main page', 'News'], 'News detail')-->
+<!-- Input //-->
+<!-- END //-->
+<!-- BTN //-->
+<!-- END //-->
+<!-- News item //-->
+<!-- END //--><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Новости</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="shortcut icon" href="/i/global/favicon.ico"/>
+    <link rel="icon" sizes="16x16 32x32 64x64" href="/i/global/favicon.ico"/>
+    <link rel="icon" type="image/png" sizes="196x196" href="/i/global/favicon.png"/>
+    <link rel="icon" type="image/png" sizes="160x160" href="/i/global/favicon.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="/i/global/favicon.png"/>
+    <link rel="icon" type="image/png" sizes="64x64" href="/i/global/favicon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/i/global/favicon.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/i/global/favicon.png"/>
+    <link rel="apple-touch-icon" href="/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="/i/global/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="/i/global/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="/i/global/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="/i/global/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="/i/global/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="/i/global/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="/i/global/favicon.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/i/global/favicon.png"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF"/>
+    <meta name="msapplication-TileImage" content="/i/global/favicon.png"/>
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <link rel="stylesheet" media="all" href="styles/main_global.css"/>
+  </head>
+  <body>
+    <header class="header">
+      <div class="section_in"> 
+        <div class="header_main">
+          <div class="header_logo"> <a href="#"><img src="i/global/logo.png" alt=""></a></div>
+          <nav class="header_nav"> 
+            <ul class="header_nav_list"> 
+              <li><a href="#">
+                  <p>Купить</p></a>
+                <ul class="submenu_list">
+                  <li><a href="#">
+                      <div class="submenu_icon">
+                        <svg class="icon icon-ui--apartament ">
+                          <use xlink:href="i/sprite/sprite.svg#ui--apartament"></use>
+                        </svg>
+                      </div>
+                      <p>Квартиры</p></a></li>
+                  <li><a href="#">
+                      <div class="submenu_icon">
+                        <svg class="icon icon-ui--home ">
+                          <use xlink:href="i/sprite/sprite.svg#ui--home"></use>
+                        </svg>
+                      </div>
+                      <p>Дома</p></a></li>
+                  <li><a href="#">
+                      <div class="submenu_icon">
+                        <svg class="icon icon-ui--land ">
+                          <use xlink:href="i/sprite/sprite.svg#ui--land"></use>
+                        </svg>
+                      </div>
+                      <p>Участки</p></a></li>
+                  <li><a href="#">
+                      <div class="submenu_icon">
+                        <svg class="icon icon-ui--cottage ">
+                          <use xlink:href="i/sprite/sprite.svg#ui--cottage"></use>
+                        </svg>
+                      </div>
+                      <p>Коттеджи</p></a></li>
+                  <li><a href="#">
+                      <div class="submenu_icon">
+                        <svg class="icon icon-ui--fence ">
+                          <use xlink:href="i/sprite/sprite.svg#ui--fence"></use>
+                        </svg>
+                      </div>
+                      <p>Дачи</p></a></li>
+                  <li><a href="#">
+                      <div class="submenu_icon">
+                        <svg class="icon icon-ui--garage ">
+                          <use xlink:href="i/sprite/sprite.svg#ui--garage"></use>
+                        </svg>
+                      </div>
+                      <p>Гараж</p></a></li>
+                </ul>
+              </li>
+              <li><a href="#">
+                  <p>Аренда</p></a>
+                <ul class="submenu_list">
+                  <li><a href="#">
+                      <div class="submenu_icon">
+                        <svg class="icon icon-ui--apartament ">
+                          <use xlink:href="i/sprite/sprite.svg#ui--apartament"></use>
+                        </svg>
+                      </div>
+                      <p>Квартиры</p></a></li>
+                  <li><a href="#">
+                      <div class="submenu_icon">
+                        <svg class="icon icon-ui--home ">
+                          <use xlink:href="i/sprite/sprite.svg#ui--home"></use>
+                        </svg>
+                      </div>
+                      <p>Дома</p></a></li>
+                  <li><a href="#">
+                      <div class="submenu_icon">
+                        <svg class="icon icon-ui--land ">
+                          <use xlink:href="i/sprite/sprite.svg#ui--land"></use>
+                        </svg>
+                      </div>
+                      <p>Участки</p></a></li>
+                  <li><a href="#">
+                      <div class="submenu_icon">
+                        <svg class="icon icon-ui--cottage ">
+                          <use xlink:href="i/sprite/sprite.svg#ui--cottage"></use>
+                        </svg>
+                      </div>
+                      <p>Коттеджи</p></a></li>
+                  <li><a href="#">
+                      <div class="submenu_icon">
+                        <svg class="icon icon-ui--fence ">
+                          <use xlink:href="i/sprite/sprite.svg#ui--fence"></use>
+                        </svg>
+                      </div>
+                      <p>Дачи</p></a></li>
+                  <li><a href="#">
+                      <div class="submenu_icon">
+                        <svg class="icon icon-ui--garage ">
+                          <use xlink:href="i/sprite/sprite.svg#ui--garage"></use>
+                        </svg>
+                      </div>
+                      <p>Гараж</p></a></li>
+                </ul>
+              </li>
+              <li><a href="#">
+                  <p>Коммерция</p></a>
+                <ul class="submenu_list">
+                  <li><a href="#">
+                      <div class="submenu_icon">
+                        <svg class="icon icon-ui--apartament ">
+                          <use xlink:href="i/sprite/sprite.svg#ui--apartament"></use>
+                        </svg>
+                      </div>
+                      <p>Квартиры</p></a></li>
+                  <li><a href="#">
+                      <div class="submenu_icon">
+                        <svg class="icon icon-ui--home ">
+                          <use xlink:href="i/sprite/sprite.svg#ui--home"></use>
+                        </svg>
+                      </div>
+                      <p>Дома</p></a></li>
+                  <li><a href="#">
+                      <div class="submenu_icon">
+                        <svg class="icon icon-ui--land ">
+                          <use xlink:href="i/sprite/sprite.svg#ui--land"></use>
+                        </svg>
+                      </div>
+                      <p>Участки</p></a></li>
+                  <li><a href="#">
+                      <div class="submenu_icon">
+                        <svg class="icon icon-ui--cottage ">
+                          <use xlink:href="i/sprite/sprite.svg#ui--cottage"></use>
+                        </svg>
+                      </div>
+                      <p>Коттеджи</p></a></li>
+                  <li><a href="#">
+                      <div class="submenu_icon">
+                        <svg class="icon icon-ui--fence ">
+                          <use xlink:href="i/sprite/sprite.svg#ui--fence"></use>
+                        </svg>
+                      </div>
+                      <p>Дачи</p></a></li>
+                  <li><a href="#">
+                      <div class="submenu_icon">
+                        <svg class="icon icon-ui--garage ">
+                          <use xlink:href="i/sprite/sprite.svg#ui--garage"></use>
+                        </svg>
+                      </div>
+                      <p>Гараж</p></a></li>
+                </ul>
+              </li>
+              <li><a href="#">
+                  <p>Риелторы</p></a>
+              </li>
+              <li><a href="#">
+                  <p>Новости</p></a>
+              </li>
+              <li><a href="#">
+                  <p>Контакты</p></a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header_info"> 
+            <div class="header_phone"> <a href="#">+7 (000) 000-00-00</a></div>
+            <div class="header_call btn call_action btn-standart">
+              <button type="button">заказать звонок</button>
+            </div>
+          </div>
+          <div class="header_burger"><span> </span><span> </span><span> </span></div>
+        </div>
+      </div>
+    </header>
+    <div class="wrapper">
+      <div class="base">
+        <section class="breadcrumb">
+          <div class="section_in"> 
+            <div class="breadcrumb_main">
+              <ul class="breadcrumb__list">
+                <li class="breadcrumb__item">
+                  <!-- if breadcrumb is single--><a class="breadcrumb__link" href="#" title="Главная">Главная</a>
+                </li>
+                <li class="breadcrumb__item"><span class="breadcrumb__link-current">Новости</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="news"> 
+          <div class="section_in"> 
+            <div class="news_main"> 
+              <div class="news_head"> 
+                <div class="news_title"> 
+                  <h1>Новости</h1>
+                </div>
+                <div class="shop_sort global_select news_sortering"> 
+                  <select name="shop_sortering">
+                    <option value="Наиболее актуальные">Наиболее актуальные</option>
+                    <option value="Сначала новые">Сначала новые</option>
+                    <option value="Сначала старые">Наиболее актуальные</option>
+                    <option value="По возрастанию цены">По возрастанию цены</option>
+                    <option value="По убыванию цены">Наиболее актуальные</option>
+                  </select>
+                </div>
+              </div>
+              <div class="news_grid_w"> 
+                <ul class="homenews_grid"> 
+                  <li class="homenews_item_w"> 
+                    <div class="news_item"> 
+                      <div class="news_item_img"> <a href="#"><img src="i/home/products_0.jpg" alt=""/>
+                          <div class="news_item_link"> 
+                            <p>Просмотреть</p>
+                          </div></a></div>
+                      <div class="news_item_content"> 
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante neque integer sed etiam in nibh...</p><span>01/01/2022 </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="homenews_item_w"> 
+                    <div class="news_item"> 
+                      <div class="news_item_img"> <a href="#"><img src="i/home/products_0.jpg" alt=""/>
+                          <div class="news_item_link"> 
+                            <p>Просмотреть</p>
+                          </div></a></div>
+                      <div class="news_item_content"> 
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante neque integer sed etiam in nibh...</p><span>01/01/2022 </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="homenews_item_w"> 
+                    <div class="news_item"> 
+                      <div class="news_item_img"> <a href="#"><img src="i/home/products_0.jpg" alt=""/>
+                          <div class="news_item_link"> 
+                            <p>Просмотреть</p>
+                          </div></a></div>
+                      <div class="news_item_content"> 
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante neque integer sed etiam in nibh...</p><span>01/01/2022 </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="homenews_item_w"> 
+                    <div class="news_item"> 
+                      <div class="news_item_img"> <a href="#"><img src="i/home/products_0.jpg" alt=""/>
+                          <div class="news_item_link"> 
+                            <p>Просмотреть</p>
+                          </div></a></div>
+                      <div class="news_item_content"> 
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante neque integer sed etiam in nibh...</p><span>01/01/2022 </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="homenews_item_w"> 
+                    <div class="news_item"> 
+                      <div class="news_item_img"> <a href="#"><img src="i/home/products_0.jpg" alt=""/>
+                          <div class="news_item_link"> 
+                            <p>Просмотреть</p>
+                          </div></a></div>
+                      <div class="news_item_content"> 
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante neque integer sed etiam in nibh...</p><span>01/01/2022 </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="homenews_item_w"> 
+                    <div class="news_item"> 
+                      <div class="news_item_img"> <a href="#"><img src="i/home/products_0.jpg" alt=""/>
+                          <div class="news_item_link"> 
+                            <p>Просмотреть</p>
+                          </div></a></div>
+                      <div class="news_item_content"> 
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante neque integer sed etiam in nibh...</p><span>01/01/2022 </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="homenews_item_w"> 
+                    <div class="news_item"> 
+                      <div class="news_item_img"> <a href="#"><img src="i/home/products_0.jpg" alt=""/>
+                          <div class="news_item_link"> 
+                            <p>Просмотреть</p>
+                          </div></a></div>
+                      <div class="news_item_content"> 
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante neque integer sed etiam in nibh...</p><span>01/01/2022 </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="homenews_item_w"> 
+                    <div class="news_item"> 
+                      <div class="news_item_img"> <a href="#"><img src="i/home/products_0.jpg" alt=""/>
+                          <div class="news_item_link"> 
+                            <p>Просмотреть</p>
+                          </div></a></div>
+                      <div class="news_item_content"> 
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante neque integer sed etiam in nibh...</p><span>01/01/2022 </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="homenews_item_w"> 
+                    <div class="news_item"> 
+                      <div class="news_item_img"> <a href="#"><img src="i/home/products_0.jpg" alt=""/>
+                          <div class="news_item_link"> 
+                            <p>Просмотреть</p>
+                          </div></a></div>
+                      <div class="news_item_content"> 
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante neque integer sed etiam in nibh...</p><span>01/01/2022 </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="homenews_item_w"> 
+                    <div class="news_item"> 
+                      <div class="news_item_img"> <a href="#"><img src="i/home/products_0.jpg" alt=""/>
+                          <div class="news_item_link"> 
+                            <p>Просмотреть</p>
+                          </div></a></div>
+                      <div class="news_item_content"> 
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante neque integer sed etiam in nibh...</p><span>01/01/2022 </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="homenews_item_w"> 
+                    <div class="news_item"> 
+                      <div class="news_item_img"> <a href="#"><img src="i/home/products_0.jpg" alt=""/>
+                          <div class="news_item_link"> 
+                            <p>Просмотреть</p>
+                          </div></a></div>
+                      <div class="news_item_content"> 
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante neque integer sed etiam in nibh...</p><span>01/01/2022 </span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="homenews_item_w"> 
+                    <div class="news_item"> 
+                      <div class="news_item_img"> <a href="#"><img src="i/home/products_0.jpg" alt=""/>
+                          <div class="news_item_link"> 
+                            <p>Просмотреть</p>
+                          </div></a></div>
+                      <div class="news_item_content"> 
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ante neque integer sed etiam in nibh...</p><span>01/01/2022 </span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="pag_block">
+                  <ul class="pag_list">
+                    <li class="pag_item prev_mod"><a class="pag_link prev_mod" href="#">
+                        <div class="pag_link_icon"> 
+                          <svg class="icon icon-arr-right ">
+                            <use xlink:href="i/sprite/sprite.svg#arr-right"></use>
+                          </svg>
+                        </div>
+                        <p>В начало</p></a></li>
+                    <li class="pag_item"><a class="pag_link active_mod" title="1">1</a></li>
+                    <li class="pag_item"><a class="pag_link" href="#" title="2">2</a></li>
+                    <li class="pag_item"><a class="pag_link" href="#" title="3">3</a></li>
+                    <li class="pag_item"><a class="pag_link dots_mod">&hellip;</a></li>
+                    <li class="pag_item"><a class="pag_link" href="#" title="4">4</a></li>
+                    <li class="pag_item"><a class="pag_link" href="#" title="5">5</a></li>
+                    <li class="pag_item next_mod"><a class="pag_link next_mod" href="#"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="section_in"> 
+          <div class="footer_main_w"> 
+            <div class="footer_top"> 
+              <div class="footer_top_info"> 
+                <div class="footer_logo"> <a href="#"><img src="i/global/logo.png" alt="">
+                    <p>Агентство Недвижимости "Солнечный берег"</p></a></div>
+                <div class="footer_info_txt"> 
+                  <p>Заключая сделки через наших специалистов вы полностью исключаете риск быть обманутым, а также получаете полную и актуальную информацию о состоянии, документах и владельцах объекта.</p>
+                </div>
+              </div>
+              <nav class="footer_nav">
+                <ul class="footer_nav_list"> 
+                  <li> <a href="#">Главная</a></li>
+                  <li> <a href="#">Купить</a>
+                    <ul class="footer_submenu"> 
+                      <li> <a href="#">Квартиры</a></li>
+                      <li> <a href="#">Дома</a></li>
+                      <li> <a href="#">Участки</a></li>
+                      <li> <a href="#">Коттеджи</a></li>
+                      <li> <a href="#">Дачи</a></li>
+                      <li> <a href="#">Гараж</a></li>
+                    </ul>
+                  </li>
+                  <li> <a href="#">Аренда</a>
+                    <ul class="footer_submenu"> 
+                      <li> <a href="#">Квартиры</a></li>
+                      <li> <a href="#">Дома</a></li>
+                      <li> <a href="#">Участки</a></li>
+                      <li> <a href="#">Коттеджи</a></li>
+                    </ul>
+                  </li>
+                  <li> <a href="#">Коммерция</a>
+                    <ul class="footer_submenu"> 
+                      <li> <a href="#">Продажа</a></li>
+                      <li> <a href="#">Аренда</a></li>
+                    </ul>
+                  </li>
+                  <li> <a href="#">Риелторы</a></li>
+                  <li> <a href="#">Новости</a></li>
+                  <li> <a href="#">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer_body"> 
+              <div class="footer_office"> 
+                <p>ОФИСЫ:</p>
+                <ul class="footer_office_list"> 
+                  <li> 
+                    <div class="footer_office_icon"> 
+                      <svg class="icon icon-location ">
+                        <use xlink:href="i/sprite/sprite.svg#location"></use>
+                      </svg>
+                    </div>
+                    <p>пгт. Джубга, ул. Советская 72 а</p>
+                  </li>
+                  <li> 
+                    <div class="footer_office_icon"> 
+                      <svg class="icon icon-location ">
+                        <use xlink:href="i/sprite/sprite.svg#location"></use>
+                      </svg>
+                    </div>
+                    <p>пгт. Новомихайловский, ул. Ленина 9б</p>
+                  </li>
+                  <li> 
+                    <div class="footer_office_icon"> 
+                      <svg class="icon icon-location ">
+                        <use xlink:href="i/sprite/sprite.svg#location"></use>
+                      </svg>
+                    </div>
+                    <p>с. Небуг, ул. Центральная 6</p>
+                  </li>
+                  <li> 
+                    <div class="footer_office_icon"> 
+                      <svg class="icon icon-location ">
+                        <use xlink:href="i/sprite/sprite.svg#location"></use>
+                      </svg>
+                    </div>
+                    <p>г. Туапсе, ул. Шаумяна 1</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer_contacts"> 
+                <p>КОНТАКТЫ:</p>
+                <ul class="footer_contacts_list"> 
+                  <li><a href="#"> 
+                      <div class="footer_contacts_icon"> 
+                        <svg class="icon icon-phone ">
+                          <use xlink:href="i/sprite/sprite.svg#phone"></use>
+                        </svg>
+                      </div>
+                      <p>8 (996) 050-04-52</p></a></li>
+                  <li><a href="#"> 
+                      <div class="footer_contacts_icon"> 
+                        <svg class="icon icon-phone ">
+                          <use xlink:href="i/sprite/sprite.svg#phone"></use>
+                        </svg>
+                      </div>
+                      <p>8 (988) 323 67 89</p></a></li>
+                  <li><a href="#"> 
+                      <div class="footer_contacts_icon"> 
+                        <svg class="icon icon-mail ">
+                          <use xlink:href="i/sprite/sprite.svg#mail"></use>
+                        </svg>
+                      </div>
+                      <p>an.solnechnybereg@yandex.ru</p></a></li>
+                </ul>
+              </div>
+              <div class="footer_policy"> <a href="#">Политика конфиденциальности </a></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_bottom">
+          <div class="section_in"> 
+            <div class="footer_bottom_main"> 
+              <div class="footer_copyright">© 2022 Все права защищены</div>
+              <div class="arkada_brand"> <a href="#"><img src="i/global/arkada.svg" alt=""></a></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-3.6.0.min.js"><\/script>')</script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+    <script>window.TweenMax || document.write('<script src="js/gsap.min.js"><\/script>')</script>
+    <script src="js/libs.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/main.js"></script>
+    <div class="popup_form"> 
+      <div class="popup_form_bg close_popup"></div>
+      <div class="popup_form_main">
+        <div class="popup_form_close close_popup"> 
+          <button> 
+            <svg class="icon icon-close ">
+              <use xlink:href="i/sprite/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="popup_form_head"> 
+          <h3>Оставьте заявку</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet pretium, ullamcorper convallis sed nec molestie.</p>
+        </div>
+        <div class="popup_form_action">
+          <form action="#"> 
+            <div class="global_input">
+              <input type="text" placeholder="Введите имя" value=""/>
+            </div>
+            <div class="global_input">
+              <input type="tel" placeholder="Введите телефон" value=""/>
+            </div>
+            <div class="global_input">
+              <input type="email" placeholder="Введите e-mail" value=""/>
+            </div>
+            <div class="btn">
+              <button type="submit">
+                <p>отправить заявку</p>
+              </button>
+            </div>
+            <div class="form_notice">Отправляя форму вы соглашаетесь с Политикой конфиденциальности</div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="burger"> 
+      <div class="burger_bg remove_popup"> </div>
+      <div class="burger_main">
+        <div class="burger_close remove_popup">
+          <button type="button">
+            <svg class="icon icon-close ">
+              <use xlink:href="i/sprite/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="footer_logo burger_logo"> <a href="#"><img src="i/global/logo.png" alt="">
+            <p>Агентство Недвижимости "Солнечный берег"</p></a></div>
+        <nav class="burger_nav"> 
+          <ul> 
+            <li> <a href="#">Купить</a></li>
+            <li> <a href="#">Аренда</a></li>
+            <li> <a href="#">Коммерция</a></li>
+            <li> <a href="#">Риелторы</a></li>
+            <li> <a href="#">Новости</a></li>
+            <li> <a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <ul class="footer_contacts_list"> 
+          <li><a href="#"> 
+              <div class="footer_contacts_icon"> 
+                <svg class="icon icon-phone ">
+                  <use xlink:href="i/sprite/sprite.svg#phone"></use>
+                </svg>
+              </div>
+              <p>8 (996) 050-04-52</p></a></li>
+          <li><a href="#"> 
+              <div class="footer_contacts_icon"> 
+                <svg class="icon icon-phone ">
+                  <use xlink:href="i/sprite/sprite.svg#phone"></use>
+                </svg>
+              </div>
+              <p>8 (988) 323 67 89</p></a></li>
+          <li><a href="#"> 
+              <div class="footer_contacts_icon"> 
+                <svg class="icon icon-mail ">
+                  <use xlink:href="i/sprite/sprite.svg#mail"></use>
+                </svg>
+              </div>
+              <p>an.solnechnybereg@yandex.ru</p></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="succes">
+      <div class="succes_main"> 
+        <p>Ваше сообщение успешно отправлено!</p>
+        <div class="succes_icon">
+           <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+<circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+<path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+</svg>
+        </div>
+      </div>
+    </div>
+    <div class="close">
+      <div class="close_main"> 
+        <p>Проверьте правильность полей!</p>
+        <div class="close_icon">
+           <svg class="checkmark_close" class="test-icon" width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="white" stroke-width="3" stroke-dasharray="100"><circle class="close__circle" cx="26" cy="26" r="25" fill="none"/><path class="icon-path" id="check" d="M 15,15 L 32,33 M 32,15 L 15,33"></path></svg></div>
+      </div>
+    </div>
+    <div class="loader"></div>
+    <div class="bg"></div>
+  </body>
+</html>
