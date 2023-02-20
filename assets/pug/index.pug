@@ -15,12 +15,9 @@ block content_block
 					.hero_filter_head 
 						ul.hero_filter_type 
 							each item, i in ['Квартиры', 'Дома', 'Участки', 'Коттеджи', 'Дачи', 'Гараж']
-								if i === 0
-									li.active
-										a(href="#")=item 
-								else
-									li 
-										a(href="#")=item 
+								li 
+									input(type="radio" name=`heroType` id=item)
+									label(for=item)=item
 					.hero_filter_action 
 						form(action="" class="form_filter")
 							.filter_geo.global_input 

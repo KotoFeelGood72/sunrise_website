@@ -78,14 +78,17 @@
 		margin-bottom: 1.5rem;
 	}
 	li {
-		&.active {
-			a {
+		input {
+			display: none;
+			&:checked + label {
 				background: $gradient;
 				font-family: $font_3;
+
 			}
 		}
-		a {
+		label {
 			padding: 1rem 1.5rem;
+			cursor: pointer;
 			// @include flex-center;
 			display: block;
 			// width: 100%;
