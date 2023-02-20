@@ -40,6 +40,7 @@
 .header_nav_list {
 	@include flex-start;
 	margin-right: 5rem;
+	position: relative;
 	&>li {
 		&:not(:last-child) {
 			margin-right: 4rem

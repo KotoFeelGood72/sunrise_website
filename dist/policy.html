@@ -531,13 +531,13 @@
         <div class="popup_form_action">
           <form action="#"> 
             <div class="global_input">
-              <input type="text" placeholder="Введите имя" value=""/>
+              <input type="text" placeholder="Введите имя" value="" oninput="this.value = this.value.slice(0, 12);"/>
             </div>
             <div class="global_input">
-              <input type="tel" placeholder="Введите телефон" value=""/>
+              <input type="tel" placeholder="Введите телефон" value="" oninput="this.value = this.value.slice(0, 12);"/>
             </div>
             <div class="global_input">
-              <input type="email" placeholder="Введите e-mail" value=""/>
+              <input type="email" placeholder="Введите e-mail" value="" oninput="this.value = this.value.slice(0, 12);"/>
             </div>
             <div class="btn">
               <button type="submit">

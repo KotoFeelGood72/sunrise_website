@@ -151,6 +151,9 @@ p {
 
 .global_input {
 	width: 100%;
+	input[type='number'] {
+    -moz-appearance: textfield;
+}
 	input {
 		@include app;
 		background-color: $grey1;
@@ -160,6 +163,7 @@ p {
 		border-radius: 0.5rem;
 		width: 100%;
 		color: $dark;
+		
 		@include bp($point_2) {
 			font-size: 1.4rem;
 			padding: 1.3rem 2rem;
@@ -286,3 +290,16 @@ input::-webkit-inner-spin-button {
 }
 
 
+
+
+.grid-1 {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(100%, 1fr))!important;
+	max-width: 100%!important;
+
+	.global_input {
+		margin-bottom: 0!important;
+	}
+
+	margin-bottom: 2rem;
+}

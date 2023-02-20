@@ -39,9 +39,9 @@ block content_block
 											class: 'input_after'
 										})
 										.after_infput_mode м2
-								.input_group_w 
+								.input_group_w
 									p Цена:
-									.input_group
+									.input_group.grid-1
 										+input({
 											place: 'от 0',
 											type: 'number',
@@ -52,7 +52,6 @@ block content_block
 											type: 'number',
 											class: 'input_price_after'
 										})
-										.after_infput_mode ₽
 								.global_select 
 									select(name="rieltor_state")
 										-for(i = 0; i < 5; i++)

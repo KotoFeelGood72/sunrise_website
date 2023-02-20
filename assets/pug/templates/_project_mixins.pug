@@ -1,7 +1,7 @@
 // Input //
 mixin input(data)
 	.global_input(class=data.class)
-		input(type=data.type ? data.type : data.type="text" placeholder=data.place ? data.place : data.place="" value=data.val ? data.val : data.val="")
+		input(type=data.type ? data.type : data.type="text" placeholder=data.place ? data.place : data.place="" value=data.val ? data.val : data.val="" oninput="this.value = this.value.slice(0, 12);")
 
 // END //
 
