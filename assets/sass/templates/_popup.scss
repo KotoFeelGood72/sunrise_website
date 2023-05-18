@@ -202,10 +202,18 @@
 			}
 			&:focus, &:hover, &.active {
 				padding: 1.5rem 2rem;
+				@include bp($point_4) {
+					color: $yellow;
+					padding: 1.5rem 2rem 1.5rem 0;
+				}
 				&:before {
 					opacity: 1;
 					visibility: visible;
 					transform: translateX(0) translateY(-50%);
+
+					@include bp($point_4) {
+						display: none;
+					}
 				}
 			}
 		}

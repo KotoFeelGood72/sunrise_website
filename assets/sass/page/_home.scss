@@ -263,10 +263,8 @@
 .icon-arr-right {
 }
 .mortgage {
-	// box-shadow: $shadow;
 	position: relative;
-	z-index: 3;
-	box-shadow: 0 -2rem 2rem rgba(0, 0, 0, 0.041);
+		box-shadow: 0 -2rem 2rem rgba(0, 0, 0, 0.041);
 	@include bp($point_2) {
 		// display: none;
 	}
